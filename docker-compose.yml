@@ -127,7 +127,7 @@ services:
     links:
       - prometheus:prometheus
     volumes:
-      - ./grafana:/var/lib/grafana
+      - ./docker/grafana:/etc/grafana/provisioning/datasources:ro
     environment:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=password
